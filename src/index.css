@@ -28,10 +28,13 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  position: relative;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: white;
+  background-color: black;
 }
 
 h1 {

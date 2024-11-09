@@ -1,0 +1,5 @@
+const movieData = [
+  {
+    name: "Horror",
+  },
+];
