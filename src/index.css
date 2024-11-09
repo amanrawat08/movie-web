@@ -1,0 +1,143 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* slider */ /* Ensure the slick slider container is positioned */
+.slick-slider {
+  position: relative;
+}
+
+/* Initially hide the navigation buttons */
+.slick-prev,
+.slick-next {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the navigation buttons when the slider container is hovered */
+.slick-slider:hover .slick-prev,
+.slick-slider:hover .slick-next {
+  opacity: 1;
+}
+
+/* Positioning the previous and next buttons */
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Position the previous and next buttons */
+.slick-prev {
+  left: 10px; /* adjust as needed */
+}
+
+.slick-next {
+  right: 60px; /* adjust as needed */
+}
+
+/* Optional: styling for dots */
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 49px;
+  line-height: 1;
+  opacity: 0.75;
+  color: red;
+}
+
+/* Set the height of the banner to 50% of the viewport height */
+.slider-container {
+  position: relative;
+  height: 600px; /* Adjust as needed */
+}
+.slick-slider {
+  position: relative;
+  height: 100%;
+  background: red;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list,
+.slick-list div {
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+}
+.slick-slide img {
+  display: block;
+  height: 100%;
+  object-fit: fill;
+}
