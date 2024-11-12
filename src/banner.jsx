@@ -18,7 +18,7 @@ export default function Banner() {
     AOS.init({ duration: 1000 });
   }, []); */
   return (
-    <div className="slider-container">
+    <div className="slider-container main-slider">
       <Slider {...settings}>
         <div className="relative">
           <img src="/img/banner1.jpg" alt="Banner 2" />
