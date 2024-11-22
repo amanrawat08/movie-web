@@ -3,28 +3,20 @@ import Header from "./assets/header";
 import Banner from "./banner";
 import Movieslider2 from "./Movieslider2";
 import { movieData } from "./data";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeroSection from "./HeroSection";
 import StaticBanner from "./StaticBanner";
 import Footer from "./assets/Footer";
+import Home from "./Home";
 function App() {
-  const latestMovie = movieData.filter((movie) => movie.category === "latest");
-  const horrorMovie = movieData.filter((movie) => movie.category === "horror");
-  const familyMovie = movieData.filter(
-    (movie) => movie.category === "WatchWithFamily"
-  );
   return (
-    <>
+    <Router>
       <Header />
-      <Banner />
-      <Movieslider2 latestMovie={latestMovie} />
-      <Movieslider2 latestMovie={horrorMovie} />
-      <HeroSection />
-      <Movieslider2 latestMovie={familyMovie} />
-      <Movieslider2 latestMovie={latestMovie} />
-      <Movieslider2 latestMovie={horrorMovie} />
-      <StaticBanner />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
